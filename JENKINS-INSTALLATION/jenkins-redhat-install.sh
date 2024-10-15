@@ -1,8 +1,8 @@
 #!/bin/bash
 sudo useradd jenkins
-# Grand sudo access to sonar user
+# Grand sudo access to jenkinsr user
 sudo echo "jenkins ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/jenkins
-# set hostname for the so server 
+# set hostname for the jenkins server 
 sudo su - jenkins
 sudo timedatectl set-timezone America/New_York
 sudo hostnamectl set-hostname jenkins
