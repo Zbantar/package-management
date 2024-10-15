@@ -1,4 +1,9 @@
 #!/bin/bash
+sudo useradd jenkins
+# Grand sudo access to sonar user
+sudo echo "jenkins ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/jenkins
+# set hostname for the so server 
+sudo su - jenkins
 sudo timedatectl set-timezone America/New_York
 sudo hostnamectl set-hostname jenkins
 sudo yum install wget tree vim git nano unzip -y
